@@ -1,0 +1,4 @@
+SELECT title FROM Movies ORDER BY rating DESC LIMIT 5;
+SELECT title FROM Movies WHERE genre IN (
+    SELECT preferences FROM Users WHERE user_id = 1
+) ORDER BY rating DESC LIMIT 5;
